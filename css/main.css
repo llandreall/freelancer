@@ -1,50 +1,283 @@
+/*Utilizamos el selector universal * para que los bloques de nuestro documento tengan el mismo tamaño según su ancho definido. También establecemos que el margen y relleno de todos los elementos será de 0*/
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-header {
+/*Barra de Navegación*/
+nav {
   position: fixed;
-  color: #fff;
-  background-color: #2c3e50;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
+  top : 0;
+  display: table;
+  margin: auto;
+  padding: 25px 90px;
   width: 100%;
-  height: 12%;
+  height: 90px;
+  font-family: "Montserrat", sans-serif;
+  background-color: #2c3e50;
 }
 
-header h2, header ul, header ul li {
-  display: inline-block;
+.nav-bar {
+	display: table-cell;
+	vertical-align: middle;
+	margin-left: 90px;
+	margin-right: 90px;
+	padding-left: 16px;
+	padding-right: 16px;
 }
 
-header h2, header ul {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+nav h1 {
+	display: inline-block;
+}
+
+nav h1 a, nav li a {
+	display: block;
+	text-decoration: none;
+	color: #fff;
+}
+
+nav h1 a {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin: 0 16px 0 0;
+	font-size: 32px;
+}
+
+nav li a {
+	line-height: 49px;
+	padding-left: 8px;
+	padding-right: 8px;
+}
+
+nav li a:hover {
+	color: #18bc9c;
+}
+
+nav ul {
+	float: right;
+  list-style: none;
+	padding-left: 0;
+	letter-spacing: 1px;
+	margin: 0 0 0 auto;
+}
+
+nav li {
+	float: left;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 24px;
+}
+
+/*Encabezado*/
+header div {
+	margin-top: 80px;
+	padding-top: 30px;
+	padding-bottom: 100px;
+}
+
+header {
+	text-align: center;
+	background-color: #18bc9c;
+	color: #fff;
+}
+
+h2 {
+	font-family: "Montserrat", sans-serif;
+	font-weight: bold;
 }
 
 header h2 {
-  left: 10%;
+	font-size: 76px;
+	line-height: 114px;
 }
 
-header ul {
-  list-style: none;
-  right: 10%;
+.star-logo {
+	display: block;
+	margin: 16px 0;
+  padding: 0;
 }
 
-ul a {
-  text-decoration: none;
-  color: #fff;
+header hr {
+	border: 2.7px solid #fff;
 }
 
-main {
- color: #fff;
- background-color: #18bc9c;
+hr {
+  display: inline-block;
+	width: 102px;
+	margin-left: 5px;
+	margin-right: 5px;
 }
 
-/*Paleta de colores:
-#2c3e50
-#18bc9c
-#212529
-*/
+header img {
+  margin-top: 65px;
+	margin-bottom: 20px;
+}
+
+header p {
+	font-family: "Lato", sans-serif;
+	font-size: 28px;
+	line-height: 42px;
+}
+
+/*Sección Portfolio*/
+.portfolio {
+	padding-top: 100px;
+	padding-bottom: 100px;
+  text-align: center;
+}
+
+.portfolio h2 {
+	font-size: 48px;
+	line-height: 58px;
+	color: #212529;
+}
+
+.portfolio img {
+  margin: 0 15px 30px 15px;
+	max-width: 350px;
+}
+
+.portfolio hr {
+	border: 2.5px solid #2c3e50;
+}
+
+.portfolio .fa {
+	color: #2c3e50;
+}
+
+/*Sección About*/
+.about {
+	text-align: center;
+	padding-top: 100px;
+	padding-bottom: 80px;
+  background-color: #18bc9c;
+	color: #fff;
+}
+
+.about h2{
+	font-size: 48px;
+	line-height: 58px;
+}
+
+.about hr {
+	border: 2.7px solid;
+}
+
+.about p:not(#download-button) {
+  display: inline-block;
+	margin: 0 15px;
+  max-width: 350px;
+  vertical-align: top;
+	text-align: left;
+	font-family: "Lato", sans-serif;
+	font-size: 20px;
+	line-height: 30px;
+}
+
+#download-button {
+	display: inline-block;
+	margin-top: 35px;
+	border: 2px solid #fff;
+	border-radius: .3em;
+	line-height: 30px;
+	font-family: "Lato", sans-serif;
+	font-size: 20px;
+}
+
+.about a {
+	text-decoration: none;
+	display: block;
+	color: #fff;
+	padding: 8px 16px;
+}
+
+.about a:hover {
+	background-color: #fff;
+	color: #18bc9c;
+}
+
+/*Sección Contact Me*/
+.contact-me {
+  text-align: center;
+	padding-top: 100px;
+	padding-bottom: 110px;
+}
+
+.contact-me h2{
+  font-size: 48px;
+	line-height: 58px;
+	color: #212529;
+}
+
+.contact-me hr {
+	border: 2.7px solid #2c3e50;
+}
+
+.contact-me .fa {
+	color: #2C3E50;
+}
+
+.contact-me div.input-container {
+  display: inline-block;
+  padding-top: 25px;
+	padding-bottom: 25px;
+	border-bottom: 1px solid #eee;
+}
+
+.contact-me ::placeholder {
+	color: #868e96;
+}
+
+.input-container {
+  width: 50%;
+}
+
+input, textarea {
+	width: 100%;
+	padding: 5px 0;
+	border: none;
+	font-family: "Lato", sans-serif;
+	font-size: 24px;
+	line-height: 36px;
+}
+
+input:focus, textarea:focus {
+	outline: none;
+}
+
+textarea {
+	width: 100%;
+	padding: 6px 0;
+	border: none;
+	resize: none;
+	font-family: "Lato", sans-serif;
+	font-size: 24px;
+	line-height: 36px;
+	color: #495057;
+}
+
+#send-button {
+  margin-left: 25%;
+  text-align: left;
+}
+
+.contact-me a {
+	display: inline-block;
+	color: #fff;
+	text-decoration: none;
+	font-weight: bold;
+	font-family: "Lato", sans-serif;
+	font-size: 20px;
+	border-radius: 6px;
+	padding: 8px 16px;
+	line-height: 30px;
+	margin-top: 25px;
+  background-color: #18bc9c;
+}
+
+.contact-me a:hover {
+	background-color: #128F76;
+}
+
+/*Pie de Página*/
